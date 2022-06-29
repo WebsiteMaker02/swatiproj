@@ -1,0 +1,420 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Fundraiser &mdash; Website Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Mansalva|Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'website/fonts/icomoon/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'website/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'website/fonts/flaticon/font/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/aos.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+    <div class="site-wrap" id="home-section">
+
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+
+
+
+
+
+        <div class="bg-primary py-3 top-bar shadow d-none d-md-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-md-left pl-0">
+                        <!-- <a href="#" class=" pr-3 pl-0">Home</a> -->
+                        <a href="#" class="p-3">Events</a>
+                        <a href="#" class="p-3">Become A Volunteer</a>
+                    </div>
+                    <div class="col-md-6 text-md-right">
+                        <!-- <a href="#" class="p-3"><span class="icon-twitter"></span></a> -->
+                        <a href="mailto:arogyadeepaswasthyasamiti@gmail.com" class="p-3"><span class="">Email: arogyadeepaswasthyasamiti@gmail.com</span></a>
+                        <!-- <a href="#" class="p-3"><span class="icon-facebook"></span></a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header class="site-navbar site-navbar-target" role="banner" style="background-color: #ffffff; margin-bottom: 50px;">
+
+            <div class="container">
+                <div class="row align-items-center position-relative">
+
+
+                    <div class="site-logo">
+                        <a href="{% url 'index'%}" class="text-white"> <img src="{% static 'website/images/AarogyaLogo.jpg' %}" alt="Image" class="img-fluid" style="height:100px;" /></a>
+                    </div>
+
+
+                    <nav class="site-navigation text-left ml-auto " role="navigation">
+                        <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                            <li><a href="{% url 'index'%}" class="nav-link">Home</a></li>
+                            <li><a href="{% url 'about'%}" class="nav-link">About Us</a></li>
+                            <li><a href="{% url 'cause'%}" class="nav-link">Services</a></li>
+                            <li><a href="{% url 'team'%}" class="nav-link">Team</a></li>
+                            <li class="active"><a href="{% url 'blog'%}" class="nav-link">Activities</a></li>
+                            <li><a href="{% url 'contact'%}" class="nav-link">Contact</a></li>
+                        </ul>
+                    </nav>
+
+
+                    <div class="ml-auto toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-white"><span class="icon-menu h3 text-white"></span></a></div>
+
+
+
+                </div>
+            </div>
+
+        </header>
+
+        <div class="container-fluid">
+            <div class="row bg-image overlay site-section" style="background-image: url('/static/website/images/social3.jfif');z-index=-1">
+			<!-- style="background:#0308aa;z-index=-1"> -->
+
+                {% for dyno in dynamic %}
+                <div class="col-md-3 " style="z-index:1;">
+                    <div class="event-29191 mb-5">
+                        <div class="px-3 d-flex">
+                            <div>
+                                <div class="mb-3">
+                                    <h1 style="color:white;">{{dyno.number}}</h1>
+										<span style="color:white;z-index:1;">
+										<span class="icon-home mr-2 text-muted"></span>
+											Health Camps
+										</span>
+                                </div>
+                                <h3><a style="color:white;" href="#">Health campaigns/events like immunization, polio and Vitamin A </a></h3>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+
+
+
+
+
+            </div>
+
+        </div>
+
+        <!--<div class="row">
+            <div class=" col-md-4">
+                50 camps
+            </div>
+            <div class=" col-md-4">
+                50 camps
+            </div>
+            <div class=" col-md-4">
+                50 camps
+            </div>
+        </div>-->
+
+
+
+
+
+        <div class="site-section">
+            <div class="container">
+                <div class="heading-20219 mb-5">
+                    <h2 class="title text-cursive">Latest Events</h2>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="event-29191 mb-5">
+                            <a href="#" class="d-block mb-3"><img src="{% static 'website/images/Activity/Kama/Diwali2.jpg' %}"" alt="Image" class="img-fluid rounded"></a>
+                            <div class="px-3 d-flex">
+
+                                
+                                <div>
+                                    <div class="mb-3">
+                                        <span class="mr-3"> <span class="icon-bookmark mr-2 text-muted"></span><a href="#">Diwali</a>, <a href="#">Event</a></span>
+                                        <span> <span class="icon-person mr-2 text-muted"></span>Kamaksipalya</span>
+                                    </div>
+                                     
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="event-29191 mb-5">
+                            <a href="#" class="d-block mb-3"><img src="{% static 'website/images/Activity/Kama/Diwali3.jpg' %}"" alt="Image" class="img-fluid rounded"></a>
+                            <div class="px-3 d-flex">
+
+                                <div>
+                                    <div class="mb-3">
+                                        <span class="mr-3"> <span class="icon-bookmark mr-2 text-muted"></span><a href="#">Diwali</a>, <a href="#">Event</a></span>
+                                        <span> <span class="icon-person mr-2 text-muted"></span>Kamaksipalya</span>
+                                    </div>
+                                     
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="event-29191 mb-5">
+                            <a href="#" class="d-block mb-3"><img src="{% static 'website/images/Activity/Kama/eyecamp1.jpg' %}"" alt="Image" class="img-fluid rounded"></a>
+                            <div class="px-3 d-flex">
+
+                                <div>
+                                    <div class="mb-3">
+                                        <span class="mr-3"> <span class="icon-bookmark mr-2 text-muted"></span><a href="#">Eye Camp</a>, <a href="#">Event</a></span>
+                                        <span> <span class="icon-person mr-2 text-muted"></span>Kamaksipalya</span>
+                                    </div>
+                                     
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="event-29191 mb-5">
+                            <a href="#" class="d-block mb-3"><img src="{% static 'website/images/Activity/Kama/eyecamp2.jpg' %}"" alt="Image" class="img-fluid rounded"></a>
+                            <div class="px-3 d-flex">
+
+                                <div>
+                                    <div class="mb-3">
+                                        <span class="mr-3"> <span class="icon-bookmark mr-2 text-muted"></span><a href="#">Eye Camp</a>, <a href="#">Event</a></span>
+                                        <span> <span class="icon-person mr-2 text-muted"></span>Kamaksipalya</span>
+                                    </div>
+                                     
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="event-29191 mb-5">
+                            <a href="#" class="d-block mb-3"><img src="{% static 'website/images/Activity/Kama/field1.jpg' %}"" alt="Image" class="img-fluid rounded"></a>
+                            <div class="px-3 d-flex">
+
+                                <div>
+                                    <div class="mb-3">
+                                        <span class="mr-3"> <span class="icon-bookmark mr-2 text-muted"></span><a href="#">Field Work</a>, <a href="#">Event</a></span>
+                                        <span> <span class="icon-person mr-2 text-muted"></span>Kamaksipalya</span>
+                                    </div>
+                                     
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="event-29191 mb-5">
+                            <a href="#" class="d-block mb-3"><img src="{% static 'website/images/Activity/Kama/field2.jpg' %}"" alt="Image" class="img-fluid rounded"></a>
+                            <div class="px-3 d-flex">
+
+                                <div>
+                                    <div class="mb-3">
+                                        <span class="mr-3"> <span class="icon-bookmark mr-2 text-muted"></span><a href="#">Field Work</a>, <a href="#">Event</a></span>
+                                        <span> <span class="icon-person mr-2 text-muted"></span>Kamaksipalya</span>
+                                    </div>
+                                     
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="event-29191 mb-5">
+                            <a href="#" class="d-block mb-3"><img src="{% static 'website/images/Activity/Kama/vaccine.jfif' %}"" alt="Image" class="img-fluid rounded"></a>
+                            <div class="px-3 d-flex">
+
+                                <div>
+                                    <div class="mb-3">
+                                        <span class="mr-3"> <span class="icon-bookmark mr-2 text-muted"></span><a href="#">Vaccination</a>, <a href="#">Event</a></span>
+                                        <span> <span class="icon-person mr-2 text-muted"></span>Kamaksipalya</span>
+                                    </div>
+                                     
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="event-29191 mb-5">
+                            <a href="#" class="d-block mb-3"><img src="{% static 'website/images/Activity/Boma/boma1.jpg' %}"" alt="Image" class="img-fluid rounded"></a>
+                            <div class="px-3 d-flex">
+
+                                <div>
+                                    <div class="mb-3">
+                                        <span class="mr-3"> <span class="icon-bookmark mr-2 text-muted"></span><a href="#">General</a>, <a href="#">Event</a></span>
+                                        <span> <span class="icon-person mr-2 text-muted"></span>Bommanahalli</span>
+                                    </div>
+                                     
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="event-29191 mb-5">
+                            <a href="#" class="d-block mb-3"><img src="{% static 'website/images/Activity/Boma/election1.jpg' %}"" alt="Image" class="img-fluid rounded"></a>
+                            <div class="px-3 d-flex">
+
+                                <div>
+                                    <div class="mb-3">
+                                        <span class="mr-3"> <span class="icon-bookmark mr-2 text-muted"></span><a href="#">Election</a>, <a href="#">Event</a></span>
+                                        <span> <span class="icon-person mr-2 text-muted"></span>Bommanahalli</span>
+                                    </div>
+                                     
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="event-29191 mb-5">
+                            <a href="#" class="d-block mb-3"><img src="{% static 'website/images/Activity/Boma/election2.jpg' %}"" alt="Image" class="img-fluid rounded"></a>
+                            <div class="px-3 d-flex">
+
+                                <div>
+                                    <div class="mb-3">
+                                        <span class="mr-3"> <span class="icon-bookmark mr-2 text-muted"></span><a href="#">Election</a>, <a href="#">Event</a></span>
+                                        <span> <span class="icon-person mr-2 text-muted"></span>Bommanahalli</span>
+                                    </div>
+                                     
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="col-12 text-center"> -->
+                        <!-- <span class="p-3">1</span> -->
+                        <!-- <a href="#" class="p-3">2</a> -->
+                        <!-- <a href="#" class="p-3">3</a> -->
+                        <!-- <a href="#" class="p-3">4</a> -->
+                    <!-- </div> -->
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--     <div class="site-section">
+      <div class="container">
+
+            <div class="d-md-flex cta-20101 align-self-center bg-light p-5">
+              <div class=""><h2 class="text-cursive">We deliver solutions for the health and wellbeing of the poor</h2></div>
+              <div class="ml-auto"><a href="#" class="btn btn-primary">Donate Now</a></div>
+            </div>
+
+      </div>
+    </div> -->
+
+        <footer class="site-footer bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-12">
+                <h2 class="footer-heading mb-4">About Us</h2>
+                <p>Arogyadeepa Swasthya Samiti evolved as a community-based organization under the programme called ‘Invest for Wellness (also known as i4We)’ implemented by Swasti. <a href="{% url 'about'%}" >Read more...</a></p>
+
+              </div>
+              <!-- <div class="col-md-4 ml-auto"> -->
+                <!-- <h2 class="footer-heading mb-4">Features</h2> -->
+                <!-- <ul class="list-unstyled"> -->
+                  <!-- <li><a href="#">About Us</a></li> -->
+                  <!-- <li><a href="#">Testimonials</a></li> -->
+                  <!-- <li><a href="#">Terms of Service</a></li> -->
+                  <!-- <li><a href="#">Privacy</a></li> -->
+                  <!-- <li><a href="#">Contact Us</a></li> -->
+                <!-- </ul> -->
+              <!-- </div> -->
+
+            </div>
+          </div>
+          <div class="col-md-4 ml-auto">
+
+            <!-- <div class="mb-5">
+              <h2 class="footer-heading mb-4">Subscribe to Newsletter</h2>
+              <form action="#" method="post" class="footer-suscribe-form">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control rounded-0 border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+                  <div class="input-group-append">
+                    <button class="btn btn-primary text-white" type="button" id="button-addon2">Subscribe</button>
+                  </div>
+                </div>
+            </div> -->
+
+
+            <h2 class="footer-heading mb-4">Follow Us</h2>
+            <a href="https://www.facebook.com/adsstrust" class="smoothscroll pl-0 pr-3"><span class="icon-facebook"></span></a>
+				<a href="https://twitter.com/adsstrust" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+				<a href="https://www.instagram.com/adss_trust/" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+				<!-- <a href="https://www.youtube.com/user/SwastiHRC" class="pl-3 pr-3"><span class="icon-youtube"></span></a>
+            <!-- </form> -->
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class="pt-5">
+              <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+   
+
+    </div>
+
+    <script src="{% static 'website/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'website/js/popper.min.js' %}"></script>
+    <script src="{% static 'website/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'website/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'website/js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'website/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'website/js/jquery.animateNumber.min.js' %}"></script>
+    <script src="{% static 'website/js/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'website/js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'website/js/aos.js' %}"></script>
+
+    <script src="{% static 'website/js/main.js' %}"></script>
+
+</body>
+
+</html>
