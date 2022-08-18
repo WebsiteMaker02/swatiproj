@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Mansalva|Roboto&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{% static 'website/fonts/icomoon/style.css' %}">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'website/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'website/css/animate.min.css' %}">
     <link rel="stylesheet" href="{% static 'website/css/jquery.fancybox.min.css' %}">
@@ -22,11 +22,16 @@
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
-
   </head>
 
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-
+<style type="text/css">
+        ul
+        {
+            text-align: right;
+            list-style-type: none;
+        }
+    </style>
     
     <div class="site-wrap" id="home-section">
 
@@ -62,12 +67,12 @@
           <div class="row align-items-center position-relative">
             
 
-            <div class="site-logo">
+            <div class="site-logo:right" style="width:auto !important">
               <a href="{% url 'index'%}" class="text-white"> <img src="{% static 'website/images/AarogyaLogo.jpg' %}" alt="Image" class="img-fluid" style="height:120px;"/></a>
             </div>
 
 
-            <nav class="site-navigation text-left ml-auto " role="navigation">
+            <nav class="site-navigation text-left ml-auto " role="navigation" style="width:auto !important">
               <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
                 <li class="active"><a href="{% url 'index'%}" class="nav-link">Home</a></li>
                 <li><a href="{% url 'about'%}" class="nav-link">About Us</a></li>
@@ -88,42 +93,56 @@
 
       </header>
 
-   <div class="owl-carousel-wrapper" style="opacity:70%;">
-
-      
-
-      <div class="box-92819">
-        <h1 class="mb-3">We believe in Everyday Wellbeing for all</h1>
-        <!-- <p><a href="contact.html" class="btn btn-primary py-3 px-4 rounded-0">Join Us</a></p> -->
-      </div>
-
-      <div>
-        <!-- <div class="ftco-cover-1 overlay" style="background-image: url('images/staff.jfif');"></div> -->
-        <!-- <div class="ftco-cover-1 overlay" style="background-image: url('/static/website/images/homepage1.jpg');"></div> -->
-        <!-- <div class="ftco-cover-1 overlay" style="background-image: url('/static/website/images/homepage1.jpg');"></div> -->
-        
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+     <img src="{% static 'website/images/homepage1.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+<!--        <h5>First slide label</h5>-->
+<!--        <p>Some representative placeholder content for the first slide.</p>-->
       </div>
     </div>
-		
+    <div class="carousel-item">
+      <img src="{% static 'website/images/homepage2.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+<!--        <h5>Second slide label</h5>-->
+        <h1 style="font-family: 'Comic Sans MS'; color:white">We believe in Everyday Wellbeing for all</h1>
+      </div>
+    </div>
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
     <div class="container">
-      <div class="feature-29192-wrap d-md-flex" style="margin-top: -20px; position: relative; z-index: 2;">
+      <div class="feature-29192-wrap d-md-flex" style="margin-top: -280px; position: relative; z-index: 2;">
 
-        <a href="#" class="feature-29192 overlay-danger"  style="background-image: url('{% static "website/images/2.jpeg"%}');">
+        <a class="feature-29192 overlay-danger"  style="background-image: url('{% static "website/images/2.jpeg"%}'); cursor:none">
           <div class="text">
             <!-- <span class="meta">Member</span> -->
             <h3 class="text-cursive text-white h2">Member Engagement</h3>
           </div>
         </a>
-		
-		<a class="feature-29192 overlay-success"  style="background-image: url('{% static "website/images/3.jpeg"%}'); background-color: #88828f">
+
+		<a class="feature-29192 overlay-danger"  style="background-image: url('{% static "website/images/3.jpeg"%}');cursor:none">
           <div class="text">
             <!-- <span class="meta" style="color: blue;">Health</span> -->
-            <h3 class="text-cursive text-blue h2">Health Screening</h3>
+            <h3 class="text-cursive text-white h2">Health Screening</h3>
           </div>
         </a>
-		
-        <a class="feature-29192 overlay-warning" style="background-image: url('{% static "website/images/health.jpg"%}');">
+
+        <a class="feature-29192 overlay-danger" style="background-image: url('{% static "website/images/health.jpg"%}');cursor:none">
           <div class="text">
             <!-- <span class="meta">Health</span> -->
             <h3 class="text-cursive text-white h1">Health Camps</h3>
@@ -362,7 +381,7 @@
       </div>
     </div>
 
-    <div class="site-section bg-image overlay-primary" style="background-image: url('{% static "website/images/7.jpg');">
+    <div class="site-section bg-image" style="background-image: url('{% static "website/images/7.jpg"%}');">
 	<!-- background-image: url('images/mission.jfif');" -->
       <div class="container">
         <div class="row align-items-stretch">
@@ -485,7 +504,8 @@
     <script src="{% static 'website/js/jquery.fancybox.min.js' %}"></script>
     <script src="{% static 'website/js/jquery.easing.1.3.js' %}"></script>
     <script src="{% static 'website/js/aos.js' %}"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 
   </body>
